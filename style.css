@@ -1,0 +1,222 @@
+html, body 
+{
+    height: 100%;
+    margin: .1em;
+    padding: .1em;
+}
+
+body {
+    background-color: lightgoldenrodyellow;
+  }
+
+table, td, th {
+    border: .0625em solid grey;
+    border-collapse: collapse;
+    width: 50em;
+}
+
+th {
+    width: 9.375em;
+    text-align: left;
+}
+
+td {
+    height: 7.5em;
+    vertical-align: top;
+}
+
+tr:nth-child(odd) {background-color: lightgray;}
+tr:nth-child(even) {background-color: white;}
+ 
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: maroon;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: dimgray;
+}
+
+.grid-container {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+  
+  .grid-item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+
+div.strengthmeter
+{
+    border:.0625em solid grey;
+    margin-top:20px;
+    width:15em;
+    height:2.1875em;
+    border-radius:.1875px;
+}
+  
+tr img 
+{
+    display: none;
+}
+
+tr:hover img 
+{
+    display: block;
+    height : 3em;
+    width : 3em;
+}
+
+/* big contact pics ---------------------------*/
+img.slideShow 
+{ 
+    position: relative;
+    left: 54em;
+    bottom: 22em;
+    height: 20em;
+    width: 20em;
+}
+
+/* button locations ---------------------------*/
+button.locStart
+{
+    position: relative;
+    left: 57em;
+    bottom: 29em;
+}
+button.locStop
+{
+    position: relative;
+    left: 62em;
+    bottom: 29em;
+}
+
+/* Map stuff, got from class example, modified-------------------------*/
+#map 
+{
+    position: relative;
+    bottom: 25em;
+    height: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+}
+
+#floating-panel {
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+      background-color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+#formMap 
+{
+    position: relative;
+    bottom: 5em;
+    height: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+}
+
+/* auto complete */
+#controls 
+{
+    position: relative;
+    width: 40em;
+    height: 20em;
+}
+
+#autocomplete 
+{
+    position: relative;
+    top: 0em;
+    left: 0em;
+    width: 20em;
+}
+
+/* directions stuff, got from google but modified to fit-------------------------*/
+
+#floating-panel 
+{
+    position: relative;
+    top: 5em;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+      
+#floating-panel 
+{
+    background: #fff;
+    padding: 5px;
+    font-size: 14px;
+    font-family: Arial;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+    display: none;
+}
+
+#right-panel 
+{
+    line-height: 20px;
+    padding-left: 10px;
+}
+
+#right-panel select, #right-panel input 
+{
+    font-size: 10px;
+}
+
+#right-panel select 
+{
+    width: 100%;
+}
+
+#right-panel i 
+{
+    font-size: 8px;
+}
+
+#right-panel 
+{
+    position: relative;
+    bottom: 20em;
+    left: 0em;
+    height: 15em;
+    float: left;
+    width: 60em;
+    overflow: auto;
+}
