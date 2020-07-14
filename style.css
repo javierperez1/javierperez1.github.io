@@ -9,26 +9,6 @@ body {
     background-color: lightgoldenrodyellow;
   }
 
-table, td, th {
-    border: .0625em solid grey;
-    border-collapse: collapse;
-    width: 50em;
-}
-
-th {
-    width: 9.375em;
-    text-align: left;
-}
-
-td {
-    height: 7.5em;
-    vertical-align: top;
-}
-
-tr:nth-child(odd) {background-color: lightgray;}
-tr:nth-child(even) {background-color: white;}
- 
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -53,170 +33,209 @@ li a:hover {
     background-color: dimgray;
 }
 
-.grid-container {
-    display: grid;
-    grid-column-gap: 50px;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
+/* eye stuff ----------------------------------- */
+
+body {
+    background: #000;
+    margin: 0;
+    padding: 0;
   }
   
-  .grid-item {
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
+  .hit-area {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
   }
-
-
-div.strengthmeter
-{
-    border:.0625em solid grey;
-    margin-top:20px;
-    width:15em;
-    height:2.1875em;
-    border-radius:.1875px;
-}
   
-tr img 
-{
-    display: none;
-}
-
-tr:hover img 
-{
-    display: block;
-    height : 3em;
-    width : 3em;
-}
-
-/* big contact pics ---------------------------*/
-img.slideShow 
-{ 
-    position: relative;
-    left: 54em;
-    bottom: 22em;
-    height: 20em;
-    width: 20em;
-}
-
-/* button locations ---------------------------*/
-button.locStart
-{
-    position: relative;
-    left: 57em;
-    bottom: 29em;
-}
-button.locStop
-{
-    position: relative;
-    left: 62em;
-    bottom: 29em;
-}
-
-/* Map stuff, got from class example, modified-------------------------*/
-#map 
-{
-    position: relative;
-    bottom: 25em;
-    height: 50%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 10%;
-}
-
-#floating-panel {
-    position: relative;
-    margin-left: 10%;
-    margin-right: 10%;
-      background-color: #fff;
-    padding: 5px;
-    text-align: center;
-    font-family: 'Roboto','sans-serif';
-    line-height: 30px;
-    padding-left: 10px;
-}
-
-#formMap 
-{
-    position: relative;
-    bottom: 5em;
-    height: 50%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 10%;
-}
-
-/* auto complete */
-#controls 
-{
-    position: relative;
-    width: 40em;
-    height: 20em;
-}
-
-#autocomplete 
-{
-    position: relative;
-    top: 0em;
-    left: 0em;
-    width: 20em;
-}
-
-/* directions stuff, got from google but modified to fit-------------------------*/
-
-#floating-panel 
-{
-    position: relative;
-    top: 5em;
+  .hitbox {
+    width: 100px;
+    height: 100px;
+    float:left;
+  }
+  
+  .eye {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
     left: 25%;
-    z-index: 5;
-    background-color: #fff;
-    padding: 5px;
-    border: 1px solid #999;
-    text-align: center;
-    font-family: 'Roboto','sans-serif';
-    line-height: 30px;
-    padding-left: 10px;
-}
-      
-#floating-panel 
-{
-    background: #fff;
-    padding: 5px;
-    font-size: 14px;
-    font-family: Arial;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
-    display: none;
-}
-
-#right-panel 
-{
-    line-height: 20px;
-    padding-left: 10px;
-}
-
-#right-panel select, #right-panel input 
-{
-    font-size: 10px;
-}
-
-#right-panel select 
-{
-    width: 100%;
-}
-
-#right-panel i 
-{
-    font-size: 8px;
-}
-
-#right-panel 
-{
+    top: 40%;
+    background-color: white;
+    pointer-events: none;
+  }
+  
+  .eye + .eye {
+    left: 55%;
+  }
+  
+  .pupil {
     position: relative;
-    bottom: 20em;
-    left: 0em;
-    height: 15em;
-    float: left;
-    width: 60em;
-    overflow: auto;
-}
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    transition: all .5s ease;
+  }
+  
+  .eyelid {
+    width: 150px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    left: 20%;
+    top: 25%;
+    pointer-events: none;
+    -webkit-animation-name: blink;
+    -webkit-animation-duration: 4.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-delay: 1s;
+    -webkit-transition: all .5s ease;
+  }
+  
+  .eyelid + .eyelid {
+    left: 50%;
+  }
+  
+  @-webkit-keyframes blink {
+    0% {
+      top: 25%;
+    }
+    95% {
+      top: 25%;
+    }
+    100% {
+      top: 40%;
+    }
+  }
+  
+  .hitbox:hover ~ .eyelid {
+    -webkit-transform: rotate(-10deg);
+  }
+  
+  .hitbox:hover ~ .eyelid:nth-of-type(2n+1) {
+    -webkit-transform: rotate(10deg);
+  }
+  
+  #c-3:hover ~ .eyelid {
+    -webkit-transform:  rotate(15deg);
+  }
+  
+  #c-3:hover ~ .eyelid:nth-of-type(2n+1) {
+    -webkit-transform: rotate(-15deg);
+  }
+  
+  #c-3:hover ~ .eye .pupil {
+    background-color: red;
+  }
+  
+  #a-1:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(60deg) translate(-30px);
+  }
+  
+  #a-2:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(80deg) translate(-30px);
+  }
+  
+  #a-3:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(90deg) translate(-30px);
+  }
+  
+  #a-4:hover ~.eye > .pupil {
+    -webkit-transform: rotate(100deg) translate(-30px);
+  }
+  
+  #a-5:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(120deg) translate(-30px);
+  }
+  
+  #b-1:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(50deg) translate(-25px);
+  }
+  
+  #b-2:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(70deg) translate(-25px);
+  }
+  
+  #b-3:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(90deg) translate(-25px);
+  }
+  
+  #b-4:hover ~.eye > .pupil {
+    -webkit-transform: rotate(110deg) translate(-25px);
+  }
+  
+  #b-5:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(130deg) translate(-25px);
+  }
+  
+  #c-1:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(0deg) translate(-25px);
+  }
+  
+  #c-2:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(0deg) translate(-10px);
+  }
+  
+  #c-3:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(0deg) translate(20px);
+  }
+  
+  #c-3:hover ~ .eye:nth-of-type(2n+1) > .pupil {
+    -webkit-transform: rotate(0deg) translate(-20px);
+  }
+  
+  #c-4:hover ~.eye > .pupil {
+    -webkit-transform: rotate(0deg) translate(10px);
+  }
+  
+  #c-5:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(0deg) translate(25px);
+  }
+  
+  #d-1:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(-50deg) translate(-25px);
+  }
+  
+  #d-2:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(-70deg) translate(-25px);
+  }
+  
+  #d-3:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(-90deg) translate(-25px);
+  }
+  
+  #d-4:hover ~.eye > .pupil {
+    -webkit-transform: rotate(-110deg) translate(-25px);
+  }
+  
+  #d-5:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(-130deg) translate(-25px);
+  }
+  
+  #e-1:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(-40deg) translate(-30px);
+  }
+  
+  #e-2:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(-60deg) translate(-30px);
+  }
+  
+  #e-3:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(-80deg) translate(-30px);
+  }
+  
+  #e-4:hover ~.eye > .pupil {
+    -webkit-transform: rotate(-100deg) translate(-30px);
+  }
+  
+  #e-5:hover ~ .eye > .pupil {
+    -webkit-transform: rotate(-120deg) translate(-30px);
+  }
+
