@@ -10,5 +10,5 @@
     Might use
 
 ---
-permalink: /index.html
+permalink: /about.html
 ---
