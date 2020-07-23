@@ -8,3 +8,7 @@
 
 # contact me
     Might use
+
+---
+permalink: /index.html
+---
