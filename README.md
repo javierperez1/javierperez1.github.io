@@ -1,7 +1,3 @@
----
-permalink: /about.html
----
-
 # portfoliowebsite
 
 # about
