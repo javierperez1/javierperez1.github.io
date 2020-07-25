@@ -1,12 +1,10 @@
-html, body {
-    height: 100%;
-    margin: .1em;
-    padding: .1em;
-}
 
-body {
-    background-color: lightgoldenrodyellow;
-  }
+
+/* Name
+-------------------------------------------------------*/
+.name {
+    text-align: center;
+}
 
 
 /* Navigation bar 
@@ -34,7 +32,22 @@ li a {
 li a:hover {
     background-color: dimgray;
 }
-/*-------------------------------------------------------*/
 
+.current {
+    background-color: dimgray;
+}
+
+
+/* Body Stuff
+-------------------------------------------------------*/
+html, body {
+    height: 100%;
+    margin: .1em;
+    padding: .1em;
+}
+
+body {
+    background-color: lightgoldenrodyellow;
+  }
 
 
