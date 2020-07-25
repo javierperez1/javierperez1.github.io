@@ -1,3 +1,7 @@
+---
+permalink: /about.html
+---
+
 # portfoliowebsite
 
 # about
@@ -8,7 +12,3 @@
 
 # contact me
     Might use
-
----
-permalink: /about.html
----
