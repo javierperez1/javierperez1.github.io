@@ -1,10 +1,10 @@
 # portfoliowebsite
 
 # about
-    Will have everything
+    Education, work experience, and skills.
 
 # projects
-    Just projects
+    Explination and potential video for each project.
 
-# contact me
-    Might use
+# contact me page
+    Will add a page for this, will need node.js to execute so a different host will be used.
