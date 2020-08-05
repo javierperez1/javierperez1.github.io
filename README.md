@@ -7,4 +7,4 @@
     Explination and potential video for each project.
 
 # contact me page
-    Will add a page for this, will need node.js to execute so a different host will be used.
+    Will add a page for this, will need node.js to execute so a different host will be used. 
