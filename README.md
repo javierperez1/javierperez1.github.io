@@ -1,10 +1,13 @@
 # portfoliowebsite
 
+# link
+    https://javierperez1.github.io/about
+
 # about
-    Education, work experience, and skills.
+    Keep it simple for now.
 
 # projects
-    Explination and potential video for each project.
+    Explanation and potential video for each project.
 
 # contact me page
     Will add a page for this, will need node.js to execute so a different host will be used. 

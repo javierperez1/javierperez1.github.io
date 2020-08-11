@@ -16,11 +16,11 @@ ul {
     overflow: hidden;
     background-color: maroon;
 }
-/*-------------------------------------------------*/
+
 li {
     float: left;
 }
-/*-------------------------------------------------*/
+
 li a {
     display: block;
     color: white;
@@ -28,19 +28,19 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-/*-------------------------------------------------*/
+
 li a:hover {
     background-color: dimgray;
 }
-/*-------------------------------------------------*/
+
 .current {
     background-color: dimgray;
 }
-/*-------------------------------------------------*/
+
 .wrapper {
     text-align: center;
 }
-/*-------------------------------------------------*/
+
 .wrapper ul {
     display: inline-block;
     margin: 0;
@@ -59,7 +59,17 @@ html, body {
     margin: .1em;
     padding: .1em;
 }
-/*-------------------------------------------------*/
+
 body {
-    background-color: lightgoldenrodyellow;
+    background-color: #1f4068;
   }
+
+
+/*--------------------------------------------------------------------------------
+    Profile Picture
+---------------------------------------------------------------------------------*/
+.profilePic {
+    border-radius: 75%;
+    width: 23em;
+    height: 23em;
+}
